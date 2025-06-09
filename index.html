@@ -19,28 +19,28 @@
     }
 
     .container {
-      padding: 10px 20px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: start;
+      justify-content: center; /* centraliza no desktop */
       min-height: 100vh;
       box-sizing: border-box;
     }
 
     .logo {
-      max-width: 280px;
+      max-width: 350px; /* maior no desktop */
       width: 100%;
       height: auto;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      margin-bottom: 30px;
+      margin-top: 0px;
     }
 
     .buttons {
       margin-top: 20px;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 20px;
       width: 100%;
       max-width: 300px;
     }
@@ -60,16 +60,21 @@
       background-color: #d4b77c;
     }
 
+    /* Estilo para CELULAR */
     @media (max-width: 768px) {
       .logo {
-        max-width: 240px; /* aumentei o tamanho */
-        margin-top: 10px;  /* reduz a margem superior */
+        max-width: 240px;
+        margin-top: 10px;
         margin-bottom: 20px;
       }
 
       .container {
-        justify-content: start;
+        justify-content: start; /* no celular, conteúdo um pouco mais para cima */
         padding-top: 40px;
+      }
+
+      .buttons {
+        margin-top: 40px; /* desce um pouco mais os botões no celular */
       }
 
       .buttons a {
